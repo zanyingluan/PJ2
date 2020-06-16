@@ -1,0 +1,31 @@
+/*页脚*/
+footer table{
+    background-color: aliceblue;
+    font-family: 方正粗黑宋简体;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 7px;
+    width: 100%;
+    text-align: center;/*表格内容居中*/
+}
+.copyright{
+    color: Black;
+    text-align: center;
+}
+footer a{
+    color: black;
+    text-decoration: none;
+}
+
+/*辅助图标*/
+.support .go-to-top{
+    position: fixed;
+    right:10px;
+    bottom:10px;
+}
+.support .refresh{
+    cursor: pointer;
+    position: fixed;
+    right:10px;
+    bottom:60px;
+}

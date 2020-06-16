@@ -1,0 +1,172 @@
+
+.main-container{
+    position: relative ;
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 30px;
+    border: darkgray 2px solid;
+    border-radius: 5px;
+    display: block;
+
+}
+.main-container p{
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+    position: relative;
+    overflow: hidden;
+}
+.main-container hr{
+    border: 1px dashed black;
+}
+
+/*图片展示部分*/
+
+.row{
+    height: 300px;
+    vertical-align: center;
+}
+/*左侧图片*/
+.picture{
+    float: left;
+    max-width: 25%;
+    margin-top: 1%;
+    margin-left: 3%;
+    margin-right: 5%;
+    width: 450px;
+    height: 90%;
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+/*图片链接*/
+#picture1{
+    background-image:url("../../images/my-favour_picture/picture1.jpg");
+}
+#picture2{
+    background-image: url("../../images/my-favour_picture/picture2.jpg");
+}
+#picture3{
+    background-image: url("../../images/my-favour_picture/picture3.jpg");
+}
+#picture4{
+    background-image: url("../../images/my-favour_picture/picture4.jpg");
+}
+#picture5{
+    background-image: url("../../images/my-favour_picture/picture5.jpg");
+}
+/*右侧文字与按钮容器*/
+.picture_introduce{
+    float: left;
+    width: 60%;
+    height: 100%;
+}
+/**文字**/
+.picture_introduce .details{
+    width: 100%;
+    position: relative;
+    float: left;
+    height:70%;
+}
+.picture_introduce .details h1{
+    font-family: 方正粗黑宋简体;
+    font-size: 1.5em;
+    line-height: 30px;
+    height:20px;
+    text-align: left;
+    vertical-align: middle;
+}
+.picture_introduce .details p {
+    line-height: 35px;
+    font-size: 1.1em;
+    font-weight: lighter;
+    text-align: left;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow:ellipsis;
+    -webkit-line-clamp:4;
+    -webkit-box-orient: vertical;
+}
+/**修改按钮**/
+
+.picture_introduce .operation{
+    margin-top: 25px;
+    text-align: left;
+    position: relative;
+    float: left;
+    width: 150px;
+    height: 20%;
+}
+.picture_introduce .word{
+    margin-left: 5px;
+    font-size: 1.0em;
+    display: none;
+    text-align: left;
+}
+
+.picture_introduce .icon{
+    width: 30px;
+    cursor: pointer;
+}
+
+
+/***增加一个图标解释的特效***/
+#modify-1:hover #modify-word-1{
+    display: inline;
+}
+#modify-2:hover #modify-word-2{
+    display: inline;
+}
+#modify-3:hover #modify-word-3{
+    display: inline;
+}
+#modify-4:hover #modify-word-4{
+    display: inline;
+}
+#modify-5:hover #modify-word-5{
+    display: inline;
+}
+
+#delete-1:hover #delete-word-1{
+    display: inline;
+}
+#delete-2:hover #delete-word-2{
+    display: inline;
+}
+#delete-3:hover #delete-word-3{
+    display: inline;
+}
+#delete-4:hover #delete-word-4{
+    display: inline;
+}
+#delete-5:hover #delete-word-5{
+    display: inline;
+}
+
+
+
+
+
+/**删除按钮**/
+.picture_introduce .delete{
+    margin-top: 25px;
+    text-align: left;
+    position: relative;
+    float: left;
+    width: 100px;
+    height: 20%;
+}
+.picture_introduce .delete img{
+    width: 30px;
+    cursor: pointer;
+}
+
+/*页码*/
+.page-number{
+     font-size: 1.1em;
+     margin-top: 0.1%;
+ }
+

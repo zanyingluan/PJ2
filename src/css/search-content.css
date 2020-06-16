@@ -1,0 +1,150 @@
+/*主容器*/
+.main-container{
+    position: relative;
+    height: 100%;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+}
+.main-container p{
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+    position: relative;
+    overflow: hidden;
+}
+.main-container hr{
+    border: 1px dashed black;
+}
+/*search容器*/
+
+.search-container{
+    margin-bottom: 20px;
+    width: 100%;
+    border: darkgray 2px solid;
+    border-radius: 5px;
+}
+
+.radio-container{
+    text-align: left;
+    margin-top:20px;
+    margin-left: 25px;
+}
+.text-container{
+    text-align: center;
+}
+
+.main-container label{
+    font-weight: bold;
+    font-size: medium;
+}
+
+#search-by-title{
+    width: 90%;
+    margin: 2%;
+    border-radius: 3px;
+    border-color: black;
+    height: 45px;
+}
+#search-by-description{
+    width: 90%;
+    margin: 2%;
+    border-radius: 3px;
+    border-color: black;
+    height: 90px;
+}
+
+/*筛选按钮图标*/
+.filter-icon{
+    text-align: center;
+}
+.filter-icon img{
+    cursor: pointer;
+}
+
+/*result容器*/
+
+.main-result-container{
+    width: 100%;
+    height: 80%;
+    border: darkgray 2px solid;
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 30px;
+}
+
+
+/*图片展示部分*/
+
+.row{
+    height: 300px;
+    vertical-align: center;
+}
+/*左侧图片*/
+.picture{
+    float: left;
+    margin-top: 1%;
+    margin-left: 3%;
+    margin-right: 5%;
+    max-width: 25%;
+    width: 450px;
+    height: 90%;
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+/*右侧文字*/
+.picture_introduce{
+    float: left;
+    width: 60%;
+    height: 100%;
+}
+
+.picture_introduce .details{
+    width: 100%;
+    position: relative;
+    float: left;
+    height:70%;
+}
+.picture_introduce .details h1{
+    font-family: 方正粗黑宋简体;
+    font-size: 1.5em;
+    line-height: 30px;
+    height:20px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.picture_introduce .details p {
+    line-height: 35px;
+    font-size: 1.1em;
+    font-weight: lighter;
+    text-align: left;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow:ellipsis;
+    -webkit-line-clamp:5;
+    -webkit-box-orient: vertical;
+}
+
+#picture1{
+    background-image: url("../../images/search_picture/picture1.jpg");
+}
+#picture2{
+    background-image: url("../../images/search_picture/picture2.jpg");
+}
+#picture3{
+    background-image: url("../../images/search_picture/picture3.jpg");
+}
+#picture4{
+    background-image: url("../../images/search_picture/picture4.jpg");
+}
+#picture5{
+    background-image: url("../../images/search_picture/picture5.jpg");
+}
+
+/*页码*/
+.page-number{
+    margin-top: 0.1%;
+}

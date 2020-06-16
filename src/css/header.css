@@ -1,0 +1,97 @@
+nav{
+    background-color:white;
+    width:100%;
+    height: 50px;
+    line-height:0;
+    min-width: 800px;
+}
+
+nav ul{
+    width:100%;
+    list-style-type: none;
+    padding: 0;
+    margin:0;
+    display: inline-block;
+}
+
+nav li{
+    float:left;
+    /*实现行内垂直居中*/
+    line-height: 50px;
+    display: inline-block;
+}
+
+nav a:link, nav a:visited{
+    font-size: larger;
+    display: block;
+    width: 150px;
+    height: 50px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    text-align: center; /*使导航栏主栏水平居中*/
+}
+
+nav a:hover{
+    color:darkgray;
+    background-color:transparent;
+    height:50px;
+}
+
+nav a:active{
+    color: honeydew;
+}
+
+nav .Nav-active {
+    color:darkgray;
+    background-color:aliceblue;
+}
+
+/*Nav-left*/
+nav .Nav-left{
+    float:left;
+    height: 50px;
+}
+
+nav .Nav-logo{
+    width:50px;
+    height:50px;
+    margin-left:25px;
+    margin-right: 15px;
+    position: relative;
+}
+
+/*Nav-right*/
+nav .Nav-right{
+    float:right;
+    margin-right:25px;
+    position: relative;
+    display: inline-block;
+}
+
+nav .Nav-right a{
+    text-align: center;
+}
+
+nav .Nav-right-menu{
+    float:right;
+    margin-right:25px;
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+nav .Nav-right-menu a{
+    text-align: justify;
+    margin-left: 1px;
+}
+
+.Nav-right:hover  .Nav-right-menu {
+    display: block !important
+}
+
+hr{
+    margin-top:10px;
+    border: 1px dashed darkgray;
+}

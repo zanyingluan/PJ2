@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../css/header.css" rel="stylesheet" type="text/css">
+    <link href="../css/browser-content.css" rel="stylesheet" type="text/css">
+    <link href="../css/footer.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../js/linkage.js"></script>
+    <title>Browser</title>
+</head>
+<body>
+    <!--header部分-->
+    <header>
+        <nav id="top">
+            <div class="Nav-left" >
+                <ul>
+                    <!--logo-->
+                    <li><a href="Home.html"><img src="../../images/Nav-logo.png" alt="logo" class="Nav-logo" width="70"></a></li>
+                    <!--导航条目-->
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Browser.html" class="Nav-active">Browser</a></li>
+                    <li><a href="Search.html">Search</a></li>
+                </ul>
+            </div>
+
+            <div class="Nav-right">
+                <!--个人中心-->
+                <ul>
+                    <li><a href="#top" id="account">My account</a></li>
+                </ul>
+                <!--下拉菜单-->
+                <div class ="Nav-right-menu">
+                    <ul>
+                        <!--利用font-awesome-->
+                        <li><a href="Upload.html"><i class="fa fa-upload"></i>Upload</a></li>
+                        <li><a href="My_photo.html"><i class="fa fa-photo"></i>My Photo</a></li>
+                        <li><a href="My_favourite.html"><i class="fa fa-heart"></i>My Favorite</a></li>
+                        <li><a href="../../index.html"><i class="fa fa-sign-in"></i>Log In</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <hr>
+    </header>
+    <!--content部分-->
+    <div class="main-container">
+        <!--侧边栏-->
+        <div class="aside">
+            <div class="search-by-title"><!--搜索框-->
+                 <div class="section-head">
+                     <p>Search By Title</p>
+                 </div>
+                 <hr>
+                 <div>
+                     <form action="#" method="post">
+                            <label><input type="text"  id ="condition" placeholder="Search by tittle.."></label>
+                            <label><input type="image" id="Submit" value="submit" alt="submit" src="../../images/icon/search.png"></label>
+                     </form>
+                </div>
+            </div>
+            <div class="hot-content" id="character">
+                <div class="section-head">
+                    <p>Hot content</p>
+                </div>
+                <hr/>
+                <div>
+                    <ul>
+                        <li><a onclick="alert('起飞~')">Sea</a></li>
+                        <li><a onclick="alert('起飞~')">Animal</a></li>
+                        <li><a onclick="alert('起飞~')">Mountain</a></li>
+                        <li><a onclick="alert('起飞~')">Night</a></li>
+                        <li><a onclick="alert('起飞~')">People</a></li>
+                    </ul>
+                    <div class="hot-content-picture">
+                        <img src="../../images/icon/hot-content.png" alt="hot-content" width="40px" id="hot-content-picture">
+                    </div>
+                </div>
+
+        </div>
+            <div class="hot-content" id="country">
+            <div class="section-head">
+                <p>Hot Country</p>
+            </div>
+            <hr/>
+            <div>
+                <ul>
+                    <li><a onclick="alert('起飞~')">Germany</a></li>
+                    <li><a onclick="alert('起飞~')">Iceland</a></li>
+                    <li><a onclick="alert('起飞~')">Japan</a></li>
+                    <li><a onclick="alert('起飞~')">France</a></li>
+                    <li><a onclick="alert('起飞~')">Chile</a></li>
+                </ul>
+                <div class="hot-content-picture">
+                    <img src="../../images/icon/hot-country.png" alt="hot-country" width="40">
+                </div>
+            </div>
+
+        </div>
+        </div>
+        <!--主要页面-->
+        <div class="main">
+            <!--筛选框-->
+            <div class="section-head">
+                <p>Filter</p>
+            </div>
+            <hr>
+            <div class="filter">
+                <label>
+                    <select class="content-select" >
+                        <option value="" disabled selected hidden>--Filter by content--</option>
+                        <option value ="Sea">Sea</option>
+                        <option value ="Animal">Animal</option>
+                        <option value="Mountain">Mountain</option>
+                        <option value="Night">Night</option>
+                        <option value="People">People</option>
+                    </select>
+                </label>
+                <!--二级联动-->
+                <label>
+                    <select onchange="changeCity(this.value)" class="country-select">
+                        <option value="" disabled selected hidden>--Filter by country--</option>
+                        <option value="0">China</option>
+                        <option value="1">Japan</option>
+                        <option value="2">Italy</option>
+                        <option value="3">America</option>
+                    </select>
+                </label>
+                <label>
+                    <select class="city-select" id="city">
+                        <option selected>--Filter by city--</option>
+                    </select>
+                </label>
+                    <img src="../../images/icon/filter.png" alt="filter" width="40px" onclick="alert('搜不到呀！')">
+
+            </div>
+
+            <div class="grid-container">
+                    <div class="picture_container" id="picture_container1">
+                        <a href="Details.html" target="_blank">
+                            <div class="picture" id="picture1">
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="picture_container" id="picture_container2">
+                        <a href="Details.html" target="_blank">
+                            <div class="picture" id="picture2">
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="picture_container" id="picture_container3">
+                        <a href="Details.html" target="_blank">
+                            <div class="picture" id="picture3">
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="picture_container" id="picture_container4">
+                        <a href="Details.html" target="_blank">
+                            <div class="picture" id="picture4">
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="picture_container" id="picture_container5">
+                        <a href="Details.html" target="_blank">
+                            <div class="picture" id="picture5">
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="picture_container" id="picture_container6">
+                        <a href="Details.html" target="_blank">
+                            <div class="picture" id="picture6">
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="picture_container" id="picture_container7">
+                        <a href="Details.html" target="_blank">
+                            <div class="picture" id="picture7">
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="picture_container" id="picture_container8">
+                        <a href="Details.html" target="_blank">
+                            <div class="picture" id="picture8">
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="picture_container" id="picture_container9">
+                        <a href="Details.html" target="_blank">
+                            <div class="picture" id="picture9">
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="picture_container" id="picture_container10">
+                        <a href="Details.html" target="_blank">
+                            <div class="picture" id="picture10">
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="picture_container" id="picture_container11">
+                        <a href="Details.html" target="_blank">
+                            <div class="picture" id="picture11">
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="picture_container" id="picture_container12">
+                        <a href="Details.html" target="_blank">
+                            <div class="picture" id="picture12">
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+            <div class="page-number">
+                <p><1 2 3 4 5></p>
+            </div>
+            </div>
+    </div>
+    <!--辅助图标部分-->
+    <div class="support">
+        <div class="go-to-top">
+            <a href="#top">
+                <img src="../../images/icon/top.png" alt="" width="30px">
+            </a>
+        </div>
+
+        <div class="refresh" onclick="alert('图片已刷新')" >
+            <img src="../../images/icon/refresh.png" alt="" width="30px">
+        </div>
+    </div>
+    <!-- foot部分-->
+    <footer>
+        <div class="container">
+            <table >
+                <tr>
+                    <td><p><a href="">Terms of use</a></p></td>
+                    <td><p><a href="">About me</a></p></td>
+                    <td>
+                        <a href="https://weixin.qq.com/" target="_blank"><img src="../../images/icon/weChat.png" alt="weChat" width="30px"/></a>
+                        <a href="https://github.com/" target="_blank"><img src="../../images/icon/github.png"  alt="github" width="30px" /></a>
+                    </td>
+                    <td rowspan="3"><img src="../../images/icon/weChat2DCode.png" alt="weChat2DCode" width="150px"/></td>
+                </tr>
+                <tr>
+                    <td><p><a href="">Privacy</a></p></td>
+                    <td><p><a href="">Contact me</a></p></td>
+                    <td>
+                        <a href="https://im.qq.com/" target="_blank"><img src="../../images/icon/qq.png" alt="qq" width="30px" /></a>
+                        <a href="https://www.twitter.com/" target="_blank"><img src="../../images/icon/twitter.png" alt="twitter" width="30px" /></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <p><a href="">Cookie</a></p>
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+        <div id="copyrightRow">
+            <div class="container">
+                <p class="copyright">Copyright © 2019-2021 Web fundamental. All Rights Reserved. 备案号：沪IronMan备000727号-1</p>
+            </div>
+        </div>
+    </footer>
+</body>

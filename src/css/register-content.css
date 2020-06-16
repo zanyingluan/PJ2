@@ -1,0 +1,44 @@
+.main-container{
+    position: relative;
+    width:500px;
+    height: 800px;
+    margin: auto;
+    text-align: center;
+}
+/*logo*/
+.logo-container{
+    position:relative;
+    display: block;
+    margin-top: 20%;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+/*表单部分*/
+.form-container{
+    display: block;
+    height:600px;
+    border-radius: 10px;
+    border: darkgray 2px solid;
+}
+.form-group{
+    height: 100px;
+    line-height: 100px;
+    display: block;
+    text-align: center;
+}
+.word-div{
+    height: 30px;
+    line-height: 30px;
+}
+.input-div{
+    text-align: center;
+    height: 70px;
+    line-height: 70px;
+}
+.login-logo{
+    text-align: center;
+}
+hr{
+    border: dashed 1px;
+}

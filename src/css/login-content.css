@@ -1,0 +1,58 @@
+.main-container{
+    position: relative;
+    width:500px;
+    height: 700px;
+    margin: auto;
+    text-align: center;
+}
+/*logo*/
+.logo-container{
+    position:relative;
+    display: block;
+    margin-top: 20%;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+/*表单部分*/
+.form-container{
+    display: block;
+    height:420px;
+    border-radius: 10px;
+    border: darkgray 2px solid;
+}
+.form-group{
+    height: 150px;
+    line-height: 150px;
+    display: block;
+    text-align: center;
+}
+.word-div{
+    height: 50px;
+    line-height: 50px;
+}
+.input-div{
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+}
+.login-logo{
+    text-align: center;
+}
+hr{
+    border: dashed 1px;
+}
+
+/*超链接部分*/
+.go-to-register{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    color: deepskyblue;
+}
+a:hover{
+    color:darkgray;
+    background-color:transparent;
+}

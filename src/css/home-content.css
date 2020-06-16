@@ -1,0 +1,95 @@
+
+.main_picture-container{
+    margin:0 auto;
+    width: 80%;
+    position: relative;
+}
+
+.main_picture {
+    border-radius: 10px;
+    margin: auto;
+    display: block;
+    background-image:url(../../images/home_picture/main.jpg);/*将图片设置为background用以裁剪*/
+    padding-top: 65%; /*用宽高比使图片自适应*/
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section-head{
+    margin: 20px;
+    font-family: 黑体;
+    font-size: 2em;
+    font-weight: bolder;
+    color: Black;
+}
+.grid-container{
+    margin: 15px;
+    display: grid;/*利用grid实现响应式布局*/
+    grid-gap:20px;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));/*根据屏幕尺寸自适应行列个数*/
+}
+.picture_container{
+    border-radius: 5px;
+    background-color: transparent;
+}
+.picture{
+    display: block;
+    margin:0 auto;
+    height: 70%;
+    border-radius: 5px;
+    padding-top: 65%; /*用宽高比使图片自适应*/
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture a{
+    display: block;
+    width:100%;
+    height:100%;
+}
+#picture1{
+    background-image:url(../../images/home_picture/picture1.jpg)
+}  #picture2{
+    background-image:url(../../images/home_picture/picture2.jpg)
+}  #picture3{
+    background-image:url(../../images/home_picture/picture3.jpg)
+}  #picture4{
+    background-image:url(../../images/home_picture/picture4.jpg)
+}  #picture5{
+    background-image:url(../../images/home_picture/picture5.jpg)
+}  #picture6{
+    background-image:url(../../images/home_picture/picture6.jpg)
+}  #picture7{
+    background-image:url(../../images/home_picture/picture7.jpg)
+}  #picture8{
+    background-image:url(../../images/home_picture/picture8.jpg)
+}  #picture9{
+    background-image:url(../../images/home_picture/picture9.jpg)
+}  #picture10{
+    background-image:url(../../images/home_picture/picture10.jpg)
+}
+.picture_introduce{
+    display: block;
+    height: 30%;
+}
+.picture_introduce h1{
+    font-family: 方正粗黑宋简体;
+    font-size: 1.5em;
+    line-height: 30px;
+    height:20px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.picture_introduce p {
+    line-height: 35px;
+    font-size: 1.1em;
+    font-weight: lighter;
+    text-align: left;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    width: 100%;
+    white-space: nowrap;
+}
+
+
+

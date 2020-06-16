@@ -1,0 +1,198 @@
+
+/*主容器*/
+.main-container{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+
+}
+.main-container hr{
+    border: 1px dashed black;
+}
+.main-container p{
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+    position: relative;
+    overflow: hidden;
+
+}
+
+/**侧边栏**/
+.aside{
+    display: inline-block;
+    margin-top: 20px;
+    margin-left:30px;
+    width: 25%;
+    height: 100%;
+    float: left;
+
+}
+.aside .picture{
+    size:50px;
+    position: center;
+}
+/***搜索框***/
+.search-by-title{
+    border: darkgray 2px solid;
+    border-radius: 5px;
+    width: 90%;
+    height: 200px;
+    position: center;
+}
+.search-by-title form{
+    text-align: center;
+    position: relative;
+    height: 50%;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 15px;
+    border: 2px aliceblue;
+    float:left;
+    overflow: hidden;
+}
+.search-by-title input{
+    margin: 10px;
+    height: 25px;
+}
+#condition{
+    width: 90%;
+    border-radius: 3px;
+    border-color: black;
+}
+/***热门内容快速浏览***/
+.hot-content{
+    margin-top: 20px;
+    border: darkgray 2px solid;
+    border-radius: 5px;
+    width: 90%;
+    position: center;
+    height: 470px;
+}
+.hot-content ul{
+    margin-top: 0;
+    padding: 0;
+    position: center;
+    list-style-type: none;
+    text-align: center;
+    font-family: 方正粗黑宋简体;
+    font-weight: normal;
+    font-size: medium;
+    overflow: hidden;
+}
+.hot-content li{
+    padding-bottom: 10px;
+    border-bottom:1px black solid;
+    line-height: 50px;
+}
+
+.hot-content li a{
+    cursor: pointer;
+}
+
+.hot-content-picture{
+    position: relative;
+    text-align: center;
+}
+
+
+/**主内容**/
+.main{
+    display: inline-block;
+    margin-top: 20px;
+    margin-left:30px;
+    width: 65%;
+    height: 100%;
+    float: left;
+}
+
+/***select***/
+.filter{
+    display: flex;
+    height: 40px;
+    justify-content: left;
+    align-content: center;
+    width: 100%;
+}
+.filter label{
+    font-weight: lighter;
+    font-size: medium;
+    position: relative;
+    margin-left: 5%;
+    border-radius: 5px;
+    width: 100%;
+    z-index: 1;
+}
+
+.filter select{
+    width: 200px
+}
+
+.filter option{
+    font-size: small;
+    font-weight: normal;
+}
+.filter img{
+    margin-left: 3%;
+    cursor: pointer;
+}
+
+/***grid处理图片***/
+.grid-container{
+    margin: 15px;
+    display: grid;/*利用grid实现响应式布局*/
+    grid-gap:20px;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+.picture_container{
+    border-radius: 5px;
+    background-color: transparent;
+}
+.picture{
+    display: block;
+    margin:0 auto;
+    height: 70%;
+    border-radius: 5px;
+    padding-top: 65%; /*用宽高比使图片自适应*/
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#picture1{
+    background-image:url(../../images/browser_picture/picture1.jpg)
+}  #picture2{
+       background-image:url(../../images/browser_picture/picture2.jpg)
+   }  #picture3{
+          background-image:url(../../images/browser_picture/picture3.jpg)
+      }  #picture4{
+             background-image:url(../../images/browser_picture/picture4.jpg)
+         }  #picture5{
+                background-image:url(../../images/browser_picture/picture5.jpg)
+            }  #picture6{
+                   background-image:url(../../images/browser_picture/picture6.jpg)
+               }  #picture7{
+                      background-image:url(../../images/browser_picture/picture7.jpg)
+                  }  #picture8{
+                         background-image:url(../../images/browser_picture/picture8.jpg)
+                     }  #picture9{
+                            background-image:url(../../images/browser_picture/picture9.jpg)
+                        }  #picture10{
+                               background-image:url(../../images/browser_picture/picture10.jpg)
+                           } #picture11{
+                                background-image:url(../../images/browser_picture/picture11.jpg)
+                            } #picture12{
+                                 background-image:url(../../images/browser_picture/picture12.jpg)
+                             }
+
+/***页码***/
+.page-number{
+    font-size: 1.1em;
+    margin-top: 0.1%;
+}
+
+/***辅助图标***/
+.go-to-top{
+    position: fixed;
+    right:10px;
+    bottom:10px;
+}
