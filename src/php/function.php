@@ -85,12 +85,12 @@ WHERE travelimagefavor.UID=' . $UID;
 function getCityCodeByCity($city)
 {
     if ($city != null) {
-        $sql = 'SELECT * FROM `geocities` WHERE AsciiName=' . $city;
+        $sql = 'SELECT * FROM `geocities` WHERE AsciiName="' . $city . '"';
         $result = pdo($sql);
         $geo = $result->fetch();
-        $cityCode = $geo['AsciiName'];
+        $cityCode = $geo['GeoNameID'];
     } else {
-        $cityCode = 'unknown-CityCode';
+        $cityCode = 'unknown';
     }
     return $cityCode;
 }
