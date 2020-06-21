@@ -2,6 +2,7 @@
 session_start();
 require_once('src/php/config.php');
 
+
 function generate($result)
 {
     while ($result->rowCount() > 0 && $row = $result->fetch()) {
@@ -99,7 +100,7 @@ function generate($result)
     <div class="grid-container">
         <?php
         try {
-            if ($_SESSION['refresh']) {
+            if ($_GET['refresh']) {
                 $pdo = new PDO(DBCONNSTRING, DBUSER, DBPASS);
                 $sql = "SELECT ImageID,PATH,Title,Description 
                                FROM travelimage 
@@ -138,7 +139,7 @@ function generate($result)
     </div>
 
     <div class="refresh">
-        <a href="src/php/refresh.php">
+        <a href="Index.php?refresh=true">
             <img src="images/icon/refresh.png" alt="" width="30px">
         </a>
     </div>

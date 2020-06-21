@@ -1,4 +1,4 @@
 <?php
-session_start();    //启动会话
+session_start();
 $_SESSION['refresh'] = true;
 header("Location: " . $_SERVER['HTTP_REFERER']);

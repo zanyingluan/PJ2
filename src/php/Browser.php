@@ -42,7 +42,7 @@ function generate($row)
                 <div class="picture_container">
                 <a href="Details.php?imageID=' . $row['ImageID'] . '">
                     <div class="picture">
-                        <img src="../../images/pictures/small/' . $row['PATH'] . ' " alt="图片">
+                        <img src="../../images/pictures/large/' . $row['PATH'] . ' " alt="图片">
                     </div>
                 </a>
             </div>';
