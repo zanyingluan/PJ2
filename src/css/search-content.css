@@ -39,14 +39,14 @@
     font-size: medium;
 }
 
-#search-by-title{
+#title-content{
     width: 90%;
     margin: 2%;
     border-radius: 3px;
     border-color: black;
     height: 45px;
 }
-#search-by-description{
+#description-content{
     width: 90%;
     margin: 2%;
     border-radius: 3px;
@@ -83,16 +83,18 @@
 /*左侧图片*/
 .picture{
     float: left;
+    max-width: 25%;
     margin-top: 1%;
     margin-left: 3%;
     margin-right: 5%;
-    max-width: 25%;
     width: 450px;
     height: 90%;
-    border-radius: 15px;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
+}
+.picture img{
+    border-radius: 15px;
+    width: 100%;
+    height: 90%;
 }
 /*右侧文字*/
 .picture_introduce{
@@ -144,7 +146,16 @@
     background-image: url("../../images/search_picture/picture5.jpg");
 }
 
-/*页码*/
-.page-number{
+
+
+.page-number {
+    display: block;
+    font-size: 1.1em;
     margin-top: 0.1%;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: gray;
 }

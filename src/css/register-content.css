@@ -1,7 +1,7 @@
 .main-container{
     position: relative;
     width:500px;
-    height: 800px;
+    height: 1100px;
     margin: auto;
     text-align: center;
 }
@@ -17,25 +17,35 @@
 /*表单部分*/
 .form-container{
     display: block;
-    height:600px;
+    height:820px;
     border-radius: 10px;
     border: darkgray 2px solid;
 }
 .form-group{
-    height: 100px;
-    line-height: 100px;
+    height: 150px;
+    line-height: 150px;
     display: block;
     text-align: center;
 }
 .word-div{
-    height: 30px;
-    line-height: 30px;
+    height: 50px;
+    line-height: 50px;
 }
 .input-div{
     text-align: center;
-    height: 70px;
-    line-height: 70px;
+    height: 40px;
+    line-height: 40px;
 }
+.alert-div{
+    height: 20px;
+    line-height: 20px;
+}
+
+.input-div input{
+    width: 350px;
+    height: 35px;
+}
+
 .login-logo{
     text-align: center;
 }

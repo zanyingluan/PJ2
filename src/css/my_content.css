@@ -37,27 +37,15 @@
     margin-right: 5%;
     width: 450px;
     height: 90%;
-    border-radius: 15px;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
 }
-/*图片链接*/
-#picture1{
-    background-image:url("../../images/my-favour_picture/picture1.jpg");
+
+.picture img{
+    border-radius: 15px;
+    width: 100%;
+    height: 90%;
 }
-#picture2{
-    background-image: url("../../images/my-favour_picture/picture2.jpg");
-}
-#picture3{
-    background-image: url("../../images/my-favour_picture/picture3.jpg");
-}
-#picture4{
-    background-image: url("../../images/my-favour_picture/picture4.jpg");
-}
-#picture5{
-    background-image: url("../../images/my-favour_picture/picture5.jpg");
-}
+
 /*右侧文字与按钮容器*/
 .picture_introduce{
     float: left;
@@ -112,44 +100,6 @@
     cursor: pointer;
 }
 
-
-/***增加一个图标解释的特效***/
-#modify-1:hover #modify-word-1{
-    display: inline;
-}
-#modify-2:hover #modify-word-2{
-    display: inline;
-}
-#modify-3:hover #modify-word-3{
-    display: inline;
-}
-#modify-4:hover #modify-word-4{
-    display: inline;
-}
-#modify-5:hover #modify-word-5{
-    display: inline;
-}
-
-#delete-1:hover #delete-word-1{
-    display: inline;
-}
-#delete-2:hover #delete-word-2{
-    display: inline;
-}
-#delete-3:hover #delete-word-3{
-    display: inline;
-}
-#delete-4:hover #delete-word-4{
-    display: inline;
-}
-#delete-5:hover #delete-word-5{
-    display: inline;
-}
-
-
-
-
-
 /**删除按钮**/
 .picture_introduce .delete{
     margin-top: 25px;
@@ -165,8 +115,15 @@
 }
 
 /*页码*/
-.page-number{
-     font-size: 1.1em;
-     margin-top: 0.1%;
- }
 
+.page-number {
+    display: block;
+    font-size: 1.1em;
+    margin-top: 0.1%;
+    text-align: center;
+}
+
+ a{
+    text-decoration: none;
+    color: gray;
+}

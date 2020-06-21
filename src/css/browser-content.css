@@ -88,7 +88,13 @@
 
 .hot-content li a{
     cursor: pointer;
+    text-decoration: none;
 }
+.hot-content li a:visited{
+    text-decoration: none;
+    color: black;
+}
+
 
 .hot-content-picture{
     position: relative;
@@ -104,6 +110,15 @@
     width: 65%;
     height: 100%;
     float: left;
+}
+
+
+.search-result p{
+    font-weight: lighter;
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 20px;
 }
 
 /***select***/
@@ -142,7 +157,7 @@
     margin: 15px;
     display: grid;/*利用grid实现响应式布局*/
     grid-gap:20px;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(3, 1fr);
 }
 .picture_container{
     border-radius: 5px;
@@ -151,44 +166,37 @@
 .picture{
     display: block;
     margin:0 auto;
-    height: 70%;
-    border-radius: 5px;
-    padding-top: 65%; /*用宽高比使图片自适应*/
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 100%;
 }
 
-#picture1{
-    background-image:url(../../images/browser_picture/picture1.jpg)
-}  #picture2{
-       background-image:url(../../images/browser_picture/picture2.jpg)
-   }  #picture3{
-          background-image:url(../../images/browser_picture/picture3.jpg)
-      }  #picture4{
-             background-image:url(../../images/browser_picture/picture4.jpg)
-         }  #picture5{
-                background-image:url(../../images/browser_picture/picture5.jpg)
-            }  #picture6{
-                   background-image:url(../../images/browser_picture/picture6.jpg)
-               }  #picture7{
-                      background-image:url(../../images/browser_picture/picture7.jpg)
-                  }  #picture8{
-                         background-image:url(../../images/browser_picture/picture8.jpg)
-                     }  #picture9{
-                            background-image:url(../../images/browser_picture/picture9.jpg)
-                        }  #picture10{
-                               background-image:url(../../images/browser_picture/picture10.jpg)
-                           } #picture11{
-                                background-image:url(../../images/browser_picture/picture11.jpg)
-                            } #picture12{
-                                 background-image:url(../../images/browser_picture/picture12.jpg)
-                             }
+.picture img{
+    width: 100%;
+    height: 18vw;
+    border-radius: 5px;
+}
+
+.picture a{
+    display: block;
+    width:100%;
+    height:100%;
+}
 
 /***页码***/
-.page-number{
+.page-number {
+    display: block;
     font-size: 1.1em;
     margin-top: 0.1%;
+    text-align: center;
 }
+
+.page-number a{
+
+    text-decoration: none;
+    color: gray;
+}
+
+
+
 
 /***辅助图标***/
 .go-to-top{

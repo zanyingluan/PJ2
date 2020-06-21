@@ -15,6 +15,7 @@
 }
 
 /*表单部分*/
+
 .form-container{
     display: block;
     height:420px;
@@ -36,6 +37,11 @@
     height: 100px;
     line-height: 100px;
 }
+.input-div input{
+    width: 200px;
+    height: 30px;
+}
+
 .login-logo{
     text-align: center;
 }

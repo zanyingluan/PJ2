@@ -1,6 +1,6 @@
 .main-container{
     position: relative;
-    height: 100%;
+    height: 1000px;
     width: 80%;
     margin-right: 10%;
     margin-left: 10%;
@@ -47,23 +47,26 @@
 /**左侧**/
 /***图片***/
 .left .picture{
+    display: flex;
+    align-items: center;
     margin: auto;
     height: 80% ;
     width: 90%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
     position: relative;
-    background-image: url("../../images/details/picture.jpg")
 }
+.picture img{
+    padding-top: 100px;
+    width: 100%;
+    max-height: 600px;
+}
+
+
 /***喜欢按钮***/
 .left .love{
-    height: 40px;
-    line-height: 40px;
+    margin:auto;
+    height: 20%;
     width: 90%;
     position: relative;
-    text-align: center;
-    margin: 5% 5% 5% 5%;
 }
 .love .icon{
     width: 40px;
@@ -81,19 +84,44 @@
 }
 /*like-number*/
 .middle .right .like-number{
+    float: left;
     border-radius: 5px;
     border: darkgray 2px solid;
     margin: 5% 5% 2% 0;
     width: 90%;
     height: 150px;
 }
-.like-number .number{
+.number{
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+}
+
+#favor-number{
+    width: 50%;
+    float: left;
     height: 50px;
     line-height: 50px;
     font-size: 1.5em;
+    font-weight: bolder;
 }
+
+#love {
+    width: 50%;
+    float: left;
+    height: 50px;
+    line-height: 50px;
+}
+
+#love img{
+    width: 40px;
+}
+
+
 /*image-details*/
 .image-details{
+    float: left;
     border-radius: 5px;
     border: darkgray 2px solid;
     margin: 5% 5% 2% 0;
@@ -122,7 +150,7 @@
 .bottom{
     margin: 5% 5% 5% 5%;
     width: 90%;
-    height:400px
+    height:200px
 }
 .bottom p{
     line-height: 2em;
@@ -133,5 +161,5 @@
     display: -webkit-box;
     text-overflow:ellipsis;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp:7;
+    -webkit-line-clamp:4;
 }

@@ -1,34 +1,37 @@
 
-var cities = new Array(3);
-cities[0] = new Array("Shanghai","Kunming","Beijing","Yantai");
-cities[1] = new Array("Tokyo","Oksaka","Kamakura","Oktawa");
-cities[2] = new Array("Roma","Milan","Venice","Florence");
-cities[3] = new Array("New York","San Francisco","Washington","Hawaii");
-
-function changeCity(val){
-
-    //7.获取第二个下拉列表
-    var cityEle = document.getElementById("city");
-
-    //9.清空第二个下拉列表的option内容
-    cityEle.options.length=0;
-
-    //2.遍历二维数组中的省份
-    for(var i=0;i<cities.length;i++){
-        //注意，比较的是角标
-        if(val==i){
-            //3.遍历用户选择的省份下的城市
-            for(var j=0;j<cities[i].length;j++){
-                //alert(cities[i][j]);
-                //4.创建城市的文本节点
-                var textNode = document.createTextNode(cities[i][j]);
-                //5.创建option元素节点
-                var opEle = document.createElement("option");
-                //6.将城市的文本节点添加到option元素节点
-                opEle.appendChild(textNode);
-                //8.将option元素节点添加到第二个下拉列表中去
-                cityEle.appendChild(opEle);
+function linkage() {
+    let countryMenu = document.getElementById("countryMenu");
+    let cityMenu = document.getElementById("cityMenu");
+    let index = countryMenu.selectedIndex;
+    let country = countryMenu.options[index].value;
+    cityMenu.length = 1;
+    if(index !== 0){
+        let request = new XMLHttpRequest();
+        request.onreadystatechange = function () {
+            if(request.readyState === 4 && request.status ===200){
+                let info = request.responseText.split("|");
+                for(let i = 0 ;i < info.length;i++){
+                    if(info[i]!== 'null'){
+                        let infos = info[i].split('&')
+                        let cityCode = infos[0];
+                        let cityName = infos[1];
+                        cityMenu[cityMenu.length] = new Option(cityName,cityCode);
+                    }
+                }
             }
-        }
+        };
+        request.open("GET", "../php/linkedFilter.php?country=" + country, true);
+        request.send();
     }
 }
+
+function changeValue() {
+    let contentValue = document.getElementById("contentMenu").value;
+    let cityValue = document.getElementById("cityMenu").value;
+    let countryValue = document.getElementById("countryMenu").value;
+    let filter = document.getElementById("filter");
+    let link = "Browser.php?page=1" + "&Content=" + contentValue + "&Country=" +countryValue+ "&City="+ cityValue +"&filter=filter";
+    filter.setAttribute("href",link);
+}
+
+
