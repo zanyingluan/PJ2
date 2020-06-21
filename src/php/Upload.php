@@ -1,6 +1,12 @@
 <?php
 session_start();
 require_once ("config.php");
+require_once ("function.php");
+if (isset($_GET['imageID'])) {
+    $img = getImageById($_GET['imageID']);
+    $imgId = $_GET['imageId'];
+} else $imgId = "";
+$UID = $_SESSION['id'];
 ?>
 
 
@@ -14,7 +20,7 @@ require_once ("config.php");
     <link href="../css/header.css" rel="stylesheet" type="text/css">
     <link href="../css/upload-content.css" rel="stylesheet" type="text/css">
     <link href="../css/footer.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="../js/upload.js"></script>
+
     <title>Upload</title>
 </head>
 <body>
@@ -67,30 +73,38 @@ require_once ("config.php");
         <div class="section-head">
             <p>Upload</p>
         </div>
+        <form enctype="multipart/form-data" action="uploadChange.php"
+             method="post">
         <hr id="long1">
-        <div class="main-upload-container">
-            <div class="upload-picture-container" id="preview">
-                <img src="" alt="" id="upload-img" >
-            </div>
-
-                <!--实现上传按钮自定义-->
-            <div class="upload-button-container">
-                <input id="upload-input" type="file" onchange="uploadImg(this,'preview')" accept="image/gif,image/jpg,image/png,image/jpeg">
-                <img id="upload" src="../../images/icon/upload.png" alt="upload" width="50px">
-                <span>Upload Photo</span>
-                </div>
-
-
+        <div class="upload-picture-container">
+                <?php
+                //如有id，输出图片,如无id，输出待上传
+                if (isset($_GET['imageID'])) echo '<img src="../../images/large/' . $img['PATH'] . '" alt="The Photo" id="uploadedImg">';
+                else echo '<img  src="" alt="The Photo" id="uploadedImg" style="display: none">';
+                ?>
         </div>
-
         <hr id="long2">
+        <div class="text-container" id="text-container1">
+            <div class="request">
+                Upload Photo
+            </div>
+            <div>
+                <label>
+                    <input type="file"  id="file" name="file">
+                </label>
+            </div>
+        </div>
+        <hr>
         <div class="text-container">
             <div class="request">
                 Photo Title
             </div>
-            <div class="textarea">
+            <div>
                 <label>
-                    <textarea id="upload-picture-title"></textarea>
+                    <input type="text"  placeholder="Title here" name="title" id="title" required
+                        <?php
+                        if (isset($_GET['imageID'])) echo 'value="' . $img['Title'] . '"';
+                        ?>>
                 </label>
             </div>
         </div>
@@ -101,7 +115,29 @@ require_once ("config.php");
             </div>
             <div class="textarea">
                 <label>
-                    <textarea id="upload-picture-description"></textarea>
+                    <textarea id="description"><?php if (isset($_GET['imageID'])) echo $img['Description']; ?></textarea>
+                </label>
+            </div>
+        </div>
+        <hr>
+        <div class="text-container">
+            <div class="request">
+                Photo Content
+            </div>
+            <div class="textarea">
+                <label>
+                    <select  name="Content" id="content">
+                        <?php
+                        for ($i = 0; $i < 8; $i++) {
+                            $contentText = getSelectedContent($i);
+                            echo '<option ';
+                            if (isset($img)) if ($img['Content'] == $contentText) echo 'selected ';
+                            echo 'value="' . $contentText . '">';
+                            if ($i == 0) $contentText = 'Choose content';
+                            echo $contentText . '</option>';
+                        }
+                        ?>
+                    </select>
                 </label>
             </div>
         </div>
@@ -112,7 +148,10 @@ require_once ("config.php");
             </div>
             <div class="textarea">
                 <label>
-                    <textarea id="upload-picture-country"></textarea>
+                    <input type="text"  placeholder="Country here" name="Country" id="country"
+                    <?php
+                    if (isset($_GET['imageID'])) echo ' value="' . getCountryByCountryCode($img['Country_RegionCodeISO']) . '"';
+                    ?>">
                 </label>
             </div>
         </div>
@@ -123,15 +162,29 @@ require_once ("config.php");
             </div>
             <div class="textarea">
                 <label>
-                    <textarea id="upload-picture-city"></textarea>
-                </label>
+                <input type="text" placeholder="City here" name="City" id="city"
+                <?php
+                if (isset($_GET['imageID'])) echo ' value="' . getCityByCityCode($img['CityCode']) . '"';
+                ?>"
+                    <label>
             </div>
         </div>
         <div class="submit">
-            <a href="My_photo.html">
-                <img src="../../images/icon/submit.png" alt="submit" width="50px">
-            </a>
+            <label>
+                <?php
+                if(isset($_GET['imageID'])){
+                    echo'
+                    <input type="image" id="submit" value="submit" alt="submit"
+                       src="../../images/icon/modify.png" width="50px">';
+                }else{
+                    echo '
+                    <input type="image" id="submit" value="submit" alt="submit"
+                       src="../../images/icon/submit.png" width="50px">';
+                }
+                ?>
+                </label>
         </div>
+        </form>
     </div>
     <!--辅助图标部分-->
     <div class="support">
@@ -181,3 +234,5 @@ require_once ("config.php");
         </div>
     </footer>
 </body>
+<script type="text/javascript" src="../js/upload.js"></script>
+</html>

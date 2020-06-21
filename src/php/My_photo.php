@@ -30,7 +30,7 @@ function generate($row)
                 </article>
             </div>
             <div class="operation">
-                <a href="Upload.php?img=' . $row['ImageID'] . '"   onclick=" return  myClick1();">
+                <a href="Upload.php?imageID=' . $row['ImageID'] . '"   onclick=" return  myClick1();">
                    <img src="../../images/icon/modify.png" alt="Delete" class="icon">
                    </a>
                 <p class="word" id="modify-word-1">Modify</p>

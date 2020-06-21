@@ -11,6 +11,13 @@ function pdo($sql)
     return $result;
 }
 
+function getMaxId()
+{
+    $sql = 'SELECT `ImageID` FROM `travelimage` ORDER BY `ImageID` DESC LIMIT 1';
+    return pdo($sql)->fetch()['ImageID'];
+}
+
+
 function deletePhoto($UID, $imageId)
 {
     $sql = 'DELETE FROM travelimage WHERE `UID` = ' . $UID . ' and `ImageID` = ' . $imageId;
@@ -287,4 +294,34 @@ function nextPage($page, $pageNumber)
 {
     if ($page == $pageNumber) return $pageNumber;
     else return $page + 1;
+}
+
+function getSelectedContent($index)
+{
+    switch ($index) {
+        case 1:
+            $result = 'Scenery';
+            break;
+        case 2:
+            $result = 'City';
+            break;
+        case 3:
+            $result = 'People';
+            break;
+        case 4:
+            $result = 'Animal';
+            break;
+        case 5:
+            $result = 'Building';
+            break;
+        case 6:
+            $result = 'Wonder';
+            break;
+        case 7:
+            $result = 'Others';
+            break;
+        default:
+            $result = '';
+    }
+    return $result;
 }

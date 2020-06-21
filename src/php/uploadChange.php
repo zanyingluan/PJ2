@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $file = $_FILES['file'];
         $PATH = $file['name'];
         $upload_path = '../../images/pictures/large/';
-        if (move_uploaded_file($file['tmp_name'], $upload_path . $PATH) || move_uploaded_file()) {
+        if (move_uploaded_file($file['tmp_name'], $upload_path . $PATH)) {
             if ($imgId == '') {//新上传图片，添加到数据库
 
                 $sql = '
@@ -26,15 +26,14 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 VALUES ("' . $newId . '","' . $title . '","' . $description . '","' . getCityCodeByCity($city) . '","' . getCountryCodeByCountry($country) . '","' . $UID . '","' . $PATH . '","' . $content . '");';
 
                 if (pdo($sql)) header("Location:Details.php?imageID=" . $newId);
-                else echo "<script>alert('Upload failure!');history.back();</script>";
+                else echo "<script>alert('Upload failure1!');history.back();</script>";
             } else {//老图修改，更改数据库
                 $sql = 'UPDATE `travelimage` SET `Title`="' . $title . '",`Description`="' . $description . '",`CityCode`="' . getCityCodeByCity($city) . '",`Country_RegionCodeISO`="' . getCountryCodeByCountry($country) . '",`PATH`="' . $PATH . '",`Content`="' . $content . '" WHERE `ImageID`=' . $imgId;
-                //echo 1233;
                 if (pdo($sql)) header("Location:Details.php?imageID=" . $imgId);
                 else echo "<script>alert('Modify failure!');history.back();</script>";
             }
         } else {//文件重名，上传失败
-            echo "<script>alert('Upload failure!');history.back();</script>";
+            echo "<script>alert('重名！!');history.back();</script>";
         }
     } else {//未上传图片，更改数据库
         $sql = 'UPDATE `travelimage` SET `Title`="' . $title . '",`Description`="' . $description . '",`CityCode`="' . getCityCodeByCity($city) . '",`Country_RegionCodeISO`="' . getCountryCodeByCountry($country) . '",`Content`="' . $content . '" WHERE `ImageID`=' . $imgId;
