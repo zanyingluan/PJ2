@@ -17,13 +17,13 @@ Grade.pdf上所有的功能都成功实现
 
 完成情况：本网站所有注册的用户的密码都经过了哈希加盐
 
-![](images/bonus/salt.jpg)
+![](images/bonus/bonus-salt.png)
 
 #### 2.2服务器部署
 
 完成情况：直接进入域名 http://xiaokonglong727.xyz:55555/
 
-![](images/bonus/server.jpg)
+![](images/bonus/bonus-server.png)
 
 
 ### 3.对PJ2和本门课程的意见和建议
