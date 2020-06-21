@@ -4,7 +4,7 @@ require_once ("config.php");
 require_once ("function.php");
 if (isset($_GET['imageID'])) {
     $img = getImageById($_GET['imageID']);
-    $imgId = $_GET['imageId'];
+    $imgId = $_GET['imageID'];
 } else $imgId = "";
 $UID = $_SESSION['id'];
 ?>
